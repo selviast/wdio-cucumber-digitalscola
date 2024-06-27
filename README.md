@@ -1,1 +1,1 @@
-# wdio-cucumber-digitalscola
+# wdio-pom-digitalscola
