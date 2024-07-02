@@ -39,10 +39,10 @@ class DashboardPage extends Page{
 
     //validate success on dashboard page
     async validateOnPage(){
-        //cart icon tertampil - default: timeout 1000
+        //cart icon tertampil - default: timeout 10000
         await this.cartIcon.waitForDisplayed()
         await expect(browser).toHaveUrl(`${process.env.BASE_URL}/inventory.html`)        
-        await browser.pause(5000)
+        await browser.pause(3000)
     }
 }
 

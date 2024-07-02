@@ -23,9 +23,14 @@ describe('Sauce Demo Test', () => {
 
 
     it('Successful add item to cart', async () => {
+        //login using standard user
+        await LoginPage.open();
+        await LoginPage.login("standard_user", process.env.PASSWORD)
+        // validate on dashboard page
+        await DashbordPage.validateOnPage()
+
         //add to cart
         await DashbordPage.addToCart()
-
         // validate on page successfully add to cart
         await DashbordPage.validateAddToCart()
     });
